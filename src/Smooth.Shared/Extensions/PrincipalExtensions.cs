@@ -18,10 +18,10 @@ public static class PrincipalExtensions
         if (principal == null) return string.Empty;
 
         var name = principal.FindFirst(JwtClaimTypes.Name)?.Value;
-        if (!string.IsNullOrWhiteSpace(name)) return name;
+        if (!string.IsNullOrWhiteSpace(name)) return name ?? string.Empty;
 
         var sub = principal.FindFirst(JwtClaimTypes.Subject)?.Value;
-        if (!string.IsNullOrWhiteSpace(name)) return sub;
+        if (!string.IsNullOrWhiteSpace(name)) return sub ?? string.Empty;
 
         return string.Empty;
     }
