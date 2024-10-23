@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smooth.Shared", "src\Smooth
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E8A5AD13-D564-4C8B-BE45-D68C5C509F17}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smooth.Shared.Razor", "src\Smooth.Shared.Razor\Smooth.Shared.Razor.csproj", "{BB461914-3AC2-4B2E-8401-ECDDF31F64AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{6A9A1AE4-E672-4F3E-A5DB-AB222A1BBF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A9A1AE4-E672-4F3E-A5DB-AB222A1BBF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A9A1AE4-E672-4F3E-A5DB-AB222A1BBF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB461914-3AC2-4B2E-8401-ECDDF31F64AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB461914-3AC2-4B2E-8401-ECDDF31F64AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB461914-3AC2-4B2E-8401-ECDDF31F64AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB461914-3AC2-4B2E-8401-ECDDF31F64AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6A9A1AE4-E672-4F3E-A5DB-AB222A1BBF4C} = {23F86CDE-98A3-4698-8A00-2E488D25BF90}
+		{BB461914-3AC2-4B2E-8401-ECDDF31F64AD} = {23F86CDE-98A3-4698-8A00-2E488D25BF90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {202E12C9-DDE0-40DF-98C6-B7E8FD52796D}
