@@ -10,7 +10,7 @@ public class VersionTagHelper : TagHelper
 
     public override void Process(TagHelperContext context, TagHelperOutput output)
     {
-        var version = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
+        var version = Assembly.GetEntryAssembly()?.GetName().Version?.ToString();
 
         if (!string.IsNullOrEmpty(version))
         {
