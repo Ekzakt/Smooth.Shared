@@ -35,7 +35,7 @@ public static class PrincipalExtensions
     ///   <c>true</c> if the specified principal is authenticated; otherwise, <c>false</c>.
     /// </returns>
     [DebuggerStepThrough]
-    public static bool IsAuthenticated(this IPrincipal principal)
+    public static bool IsAuthenticated(this ClaimsPrincipal principal)
     {
         return principal != null && principal.Identity != null && principal.Identity.IsAuthenticated;
     }
