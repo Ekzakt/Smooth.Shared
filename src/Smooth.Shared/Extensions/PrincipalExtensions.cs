@@ -1,7 +1,6 @@
 ﻿using IdentityModel;
 using System.Diagnostics;
 using System.Security.Claims;
-using System.Security.Principal;
 
 namespace Smooth.Shared.Extensions;
 
