@@ -7,10 +7,10 @@ namespace Smooth.Shared.Extensions;
 public static class PrincipalExtensions
 {
     /// <summary>
-    /// Gets the name.
+    /// Gets the display name of the principal.
     /// </summary>
     /// <param name="principal">The principal.</param>
-    /// <returns></returns>
+    /// <returns>The display name if found; otherwise, an empty string.</returns>
     [DebuggerStepThrough]
     public static string GetDisplayName(this ClaimsPrincipal principal)
     {
@@ -27,15 +27,32 @@ public static class PrincipalExtensions
 
 
     /// <summary>
-    /// Determines whether this instance is authenticated.
+    /// Determines whether the principal is authenticated.
     /// </summary>
     /// <param name="principal">The principal.</param>
-    /// <returns>
-    ///   <c>true</c> if the specified principal is authenticated; otherwise, <c>false</c>.
-    /// </returns>
+    /// <returns><c>true</c> if the principal is authenticated; otherwise, <c>false</c>.</returns>
     [DebuggerStepThrough]
     public static bool IsAuthenticated(this ClaimsPrincipal principal)
     {
         return principal != null && principal.Identity != null && principal.Identity.IsAuthenticated;
+    }
+
+
+    /// <summary>
+    /// Gets the user ID of the principal.
+    /// </summary>
+    /// <param name="principal">The principal.</param>
+    /// <returns>The user ID if found; otherwise, an empty string.</returns>
+    //[DebuggerStepThrough]
+    public static Guid GetUserId(this ClaimsPrincipal principal)
+    {
+        var userId = principal.FindFirst(c => c.Type == "sub")?.Value;
+
+        if (!string.IsNullOrWhiteSpace(userId))
+        {
+            return new Guid(userId);
+        }
+
+        return Guid.Empty;
     }
 }
