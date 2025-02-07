@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Security.Claims;
 
-namespace Smooth.Shared.Extensions;
+namespace Smooth.Shared.Application.Extensions;
 
 public static class PrincipalExtensions
 {

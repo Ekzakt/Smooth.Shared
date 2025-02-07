@@ -1,4 +1,4 @@
-﻿namespace Smooth.Shared.Configuration;
+﻿namespace Smooth.Shared.Application.Configuration;
 
 public class AzureOptions
 {
